@@ -61,7 +61,6 @@ extension UpcomingViewController : UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         let title = titles[indexPath.row]
-        print("dungnd: \(title)")
         cell.configure(with: TitleViewModel(titleName: (title.original_title ?? title.original_name) ?? "Unknow Title View", posterUrl: title.poster_path ?? "Unknow Title View" ))
         return cell
     }

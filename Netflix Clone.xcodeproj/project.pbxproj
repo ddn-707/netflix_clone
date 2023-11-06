@@ -10,6 +10,7 @@
 		650D93BB2AF1542D00D08B94 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650D93BA2AF1542D00D08B94 /* TitleCollectionViewCell.swift */; };
 		650D93BE2AF157C100D08B94 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 650D93BD2AF157C100D08B94 /* SDWebImage */; };
 		650D93C02AF157C100D08B94 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 650D93BF2AF157C100D08B94 /* SDWebImageMapKit */; };
+		65240EC32AF934D000621A4B /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65240EC22AF934D000621A4B /* SearchResultsViewController.swift */; };
 		656AAD9E2AE8063600F8AF1E /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656AAD9D2AE8063600F8AF1E /* APICaller.swift */; };
 		656AADA02AE81FEE00F8AF1E /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656AAD9F2AE81FEE00F8AF1E /* Title.swift */; };
 		65B4A1352AED4C46004AB2A4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B4A1342AED4C46004AB2A4 /* Extensions.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		650D93BA2AF1542D00D08B94 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		65240EC22AF934D000621A4B /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		656AAD9D2AE8063600F8AF1E /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		656AAD9F2AE81FEE00F8AF1E /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		65B4A1342AED4C46004AB2A4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -102,6 +104,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65240EC42AF9354400621A4B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				65C74DE42ADD7AF2001456F3 /* MainTabBarViewController.swift */,
+				65C74E112ADD8156001456F3 /* HomeViewController.swift */,
+				65C74E132ADD817A001456F3 /* UpcomingViewController.swift */,
+				65C74E152ADD819B001456F3 /* SearchViewController.swift */,
+				65C74E172ADD81B1001456F3 /* DownloadsViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		65240EC52AF9354C00621A4B /* General */ = {
+			isa = PBXGroup;
+			children = (
+				65240EC22AF934D000621A4B /* SearchResultsViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		65C74DD42ADD7AF2001456F3 = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +155,6 @@
 				65C74E102ADD811C001456F3 /* Controllers */,
 				65C74DE02ADD7AF2001456F3 /* AppDelegate.swift */,
 				65C74DE22ADD7AF2001456F3 /* SceneDelegate.swift */,
-				65C74DE42ADD7AF2001456F3 /* MainTabBarViewController.swift */,
 				65C74DE92ADD7AF3001456F3 /* Assets.xcassets */,
 				65C74DEB2ADD7AF3001456F3 /* LaunchScreen.storyboard */,
 				65C74DEE2ADD7AF3001456F3 /* Info.plist */,
@@ -161,10 +182,8 @@
 		65C74E102ADD811C001456F3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				65C74E112ADD8156001456F3 /* HomeViewController.swift */,
-				65C74E132ADD817A001456F3 /* UpcomingViewController.swift */,
-				65C74E152ADD819B001456F3 /* SearchViewController.swift */,
-				65C74E172ADD81B1001456F3 /* DownloadsViewController.swift */,
+				65240EC52AF9354C00621A4B /* General */,
+				65240EC42AF9354400621A4B /* Core */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -358,6 +377,7 @@
 				65DE38122AE40F9F007809B8 /* HeroHeaderUIView.swift in Sources */,
 				65C74E182ADD81B1001456F3 /* DownloadsViewController.swift in Sources */,
 				65C74DE12ADD7AF2001456F3 /* AppDelegate.swift in Sources */,
+				65240EC32AF934D000621A4B /* SearchResultsViewController.swift in Sources */,
 				65B4A1352AED4C46004AB2A4 /* Extensions.swift in Sources */,
 				65C74DE32ADD7AF2001456F3 /* SceneDelegate.swift in Sources */,
 				65C74E142ADD817A001456F3 /* UpcomingViewController.swift in Sources */,
