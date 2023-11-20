@@ -17,7 +17,7 @@ enum Sessions: Int {
 
 class HomeViewController: UIViewController {
     
-    private var radomTrendingMovies: Title?
+    private var randomTrendingMovie: Title?
     private var headerView: HeroHeaderUIView?
     
     let sectionTitles:[String] = ["Trending Movies", "Popular", "Trending TV","Upcoming Movies","Top rates"]
@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
         
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
         homeFeedTable.tableHeaderView = headerView
-       configureHeroHeaderView()
+        configureHeroHeaderView()
     }
     
     override func viewDidLayoutSubviews() {
@@ -49,17 +49,21 @@ class HomeViewController: UIViewController {
         homeFeedTable.frame = view.bounds
     }
     
-    func configureHeroHeaderView(){
-        APICaller.shared.getTredingMovies { result in
+    private func configureHeroHeaderView() {
+
+        APICaller.shared.getTredingMovies() { [weak self] result in
             switch result {
             case .success(let titles):
                 let selectedTitle = titles.randomElement()
-                self.radomTrendingMovies = selectedTitle
-                self.headerView?.configure(with: TitleViewModel(titleName: selectedTitle?.original_title ?? selectedTitle?.original_name ?? "", posterUrl: selectedTitle?.poster_path ?? ""))
-            case .failure(let error):
-                print(error.localizedDescription)
+
+                self?.randomTrendingMovie = selectedTitle
+                self?.headerView?.configure(with: TitleViewModel(titleName: selectedTitle?.original_title ?? "", posterUrl: selectedTitle?.poster_path ?? ""))
+
+            case .failure(let erorr):
+                print(erorr.localizedDescription)
             }
         }
+
     }
     
     private func configureNavbar (){
